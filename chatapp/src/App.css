@@ -1,38 +1,129 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+  background-color: rgba(99, 99, 191, 0.07);
+}
+
+.App-content {
+  width: 100%;
+  max-width: 900px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+
+.MessageLog {
+  list-style: none;
+  padding-left: 0;
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.Messages-message {
+  display: flex;
+  margin-top: 10px;
+}
+
+.Messages-message.currentMember {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.avatar {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.Messages-message > .avatar {
+  margin: 0 10px -10px;
+}
+
+.username {
+  color: gray;
+  font-size: 14px;
+}
+.Message-content > .username {
+  padding-bottom: 4px;
+}
+
+.Message-content > .text {
+  padding: 10px;
+  max-width: 400px;
+  margin: 0;
+  border-radius: 12px;
+  background-color: #6363bf;
   color: white;
+  display: inline-block;
 }
 
-.App-link {
-  color: #61dafb;
+.Members {
+  border-bottom: solid #6363bf1c;
+  background: white;
+  padding: 8px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Members-count {
+  margin-bottom: 8px;
+}
+
+.Members-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.Members-list > .Member {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 8px;
+}
+.Member > .avatar {
+  margin-right: 5px;
+  height: 24px;
+  width: 24px;
+}
+
+.currentMember > .Message-content .text {
+  background-color: white;
+  border-top-right-radius: 0;
+  color: black;
+}
+
+form {
+  display: flex;
+  width: 100%;
+  background: white;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+input {
+  font-size: 16px;
+  border: 0;
+  outline: none;
+  flex-grow: 1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+button {
+  padding: 12px 14px;
+  font-size: 16px;
+  background-color: #6363bf;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 14px;
+  cursor: pointer;
+}
+
+.typing-indicator {
+  color: gray;
+  font-size: 14px;
 }
