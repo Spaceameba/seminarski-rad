@@ -19,10 +19,12 @@ class Messages extends Component {
       : "Messages-message";
     return (
       <li key={id} className={className}>
-        <span className="avatar" style={{ backgroundColor: color }} />
+        {/* <span className="avatar" style={{ backgroundColor: color }} /> */}
         <div className="Message-content">
           <div className="username">{username}</div>
-          <div className="text">{data}</div>
+          <div className="text" style={{ backgroundColor: color }}>
+            {data}
+          </div>
         </div>
       </li>
     );

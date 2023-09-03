@@ -17,6 +17,8 @@
 }
 
 .MessageLog {
+  max-width: 60%;
+  min-width: 30%;
   list-style: none;
   padding-left: 0;
   flex-grow: 1;
@@ -59,30 +61,9 @@
   background-color: #6363bf;
   color: white;
   display: inline-block;
+  overflow-wrap: break-word;
 }
 
-.Members {
-  border-bottom: solid #6363bf1c;
-  background: white;
-  padding: 8px;
-}
-
-.Members-count {
-  margin-bottom: 8px;
-}
-
-.Members-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-
-.Members-list > .Member {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-right: 8px;
-}
 .Member > .avatar {
   margin-right: 5px;
   height: 24px;
@@ -90,17 +71,26 @@
 }
 
 .currentMember > .Message-content .text {
-  background-color: white;
   border-top-right-radius: 0;
-  color: black;
+  color: white;
+}
+
+.Input {
+  max-width: 60%;
+  min-width: 30%;
+}
+
+h1 {
+  color: #494986;
 }
 
 form {
   display: flex;
   width: 100%;
-  background: white;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1);
+  /* background: white; */
+  /* box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1); */
   border-radius: 10px;
+  margin-bottom: 30px;
 }
 
 input {
@@ -115,15 +105,11 @@ input {
 button {
   padding: 12px 14px;
   font-size: 16px;
-  background-color: #6363bf;
+  font-weight: 600;
+  background-color: #494986;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   margin: 14px;
   cursor: pointer;
-}
-
-.typing-indicator {
-  color: gray;
-  font-size: 14px;
 }
